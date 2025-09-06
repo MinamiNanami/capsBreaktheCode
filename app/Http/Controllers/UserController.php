@@ -9,14 +9,9 @@ use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
     // Show users page
-    public function index(Request $request)
+    public function index()
     {
-        $role = $request->get('role', 'all');
-
-        $users = $role === 'all'
-            ? User::all()
-            : User::where('role', $role)->get();
-
+        $users = User::all();
         return view('users', compact('users'));
     }
 

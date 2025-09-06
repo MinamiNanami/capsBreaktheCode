@@ -30,3 +30,4 @@ class BalanceApprovalController extends Controller
         return back()->with('error', 'Balance request rejected.');
     }
 }
+    
